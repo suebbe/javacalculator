@@ -1,37 +1,48 @@
 
-/**
- * total is the current total
- */
+
+let firstNumber = parseInt(prompt("Please enter a number"),10);
+let operator = prompt("Choose between +, -, / or *");
+let secondNumber = parseInt(prompt("Please enter another number"),10);
+
+
+let resultAdd = add(firstNumber,secondNumber);
+let resultSubtract = subtract(firstNumber,secondNumber);
+let resultMultiply = multiply(firstNumber,secondNumber);
+let resultDivide = divide(firstNumber,secondNumber);
+
 let total = 0;
-/**
- * Memory is every previous calculation
- */
-let memory = [];
+
+if (operator == "+") {
+  total = add(firstNumber, secondNumber);
+} else if (operator == "-") {
+  total = subtract(firstNumber, secondNumber);
+} else if (operator == "/") {
+  total = divide(firstNumber, secondNumber);
+} else if (operator == "*"){
+  total = multiply(firstNumber, secondNumber);
+} else {
+  alert("Please enter a valid operator")
+}
+
 
 function add(firstNumber, secondNumber) {
-  // Implement me
+  return firstNumber + secondNumber;
+
 }
 
-function subtract() {
-  // Implement me
+
+function subtract(firstNumber, secondNumber) {
+  return firstNumber - secondNumber;
 }
 
-function multiply() {
-  // Implement me
+
+function multiply(firstNumber, secondNumber) {
+  return firstNumber * secondNumber;
 }
 
-function divide() {
-  // Implement me
+
+function divide(firstNumber, secondNumber) {
+  return firstNumber / secondNumber;
 }
 
-function getTotal() {
-  // Implement me
-}
-
-function clearMemory() {
-  // Implement me
-}
-
-function calculate(firstNumber, operator, secondNumber) {
-  // Implement me
-}
+console.log(total);
